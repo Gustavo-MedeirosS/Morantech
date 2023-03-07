@@ -11,7 +11,7 @@
 
     Como sabemos, um dos principais fatores para o desperdício/perda do morango é a falta do controle e monitoramento de temperatura e umidade da fruta. <br> Esse desperdício gira em torno de 30% da quantidade total.
     <br> <br>
-    O objetivo da Morantech é zerar esse desperdício e aumentar os ganhos de sua empresa.
+    O objetivo da Morantech é reduzir esse desperdício a 5% e aumentar os ganhos de sua empresa.
     <br> <br>
     Faça uma simulação abaixo e veja os números com e sem o monitoramento da temperatura e umidade.
     <br> <br>
@@ -34,10 +34,11 @@
         var valorKg = Number(input_valorKg.value)
         var calculoPerdaMorango = qtdMorango * 0.30
         var calculoPerdaDinheiro = (valorKg * qtdMorango) * 0.30
-        var ganhoDinheiro = (valorKg * qtdMorango) * 1.30
+        var ganhoDinheiro = (valorKg * qtdMorango) * 0.25
+        var calculoGanhoMorango = qtdMorango * 0.25
         
-        div_Morantech.innerHTML = `<br> Sem a tecnologia Morantech, no seu transporte de ${qtdMorango}kg morango é perdido cerca de ${calculoPerdaMorango}kg, o que representa uma perda de R$${calculoPerdaDinheiro} para a empresa. <br>`
+        div_Morantech.innerHTML = `<br> Sem a tecnologia Morantech, no seu transporte de ${qtdMorango}kg de morango é perdido cerca de ${calculoPerdaMorango}kg, o que representa uma perda de R$${calculoPerdaDinheiro} para a empresa. <br>`
 
-        div_Morantech.innerHTML += `<br> Já com a tecnologia Morantech, realizando o transporte de ${qtdMorango}kg de morango, não há desperdício durante o transporte e sua empresa tem um ganho de cerca de 30%, representando R$${ganhoDinheiro} a mais.`
+        div_Morantech.innerHTML += `<br> Já com a tecnologia Morantech, transportando ${qtdMorango}kg de morango, há uma redução de 25% da perda dos frutos, o que representa ${calculoGanhoMorango}kg que deixam de ser perdidos e R$${ganhoDinheiro} de economia/ganho para a empresa.`
     }
 </script>
