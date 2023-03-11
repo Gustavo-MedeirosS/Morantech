@@ -13,9 +13,9 @@ cnpj char(14)
 ) auto_increment = 1;
 
 insert into cadastro values
-(null, 'Transports Morango', 'transportsmorango@morantech', 'transports123', '11901234567', '00000000000001'),
-(null, 'Leva e Traz Morango', 'levaetrazmorango@morantech', 'levaetraz123', '11901234568', '00000000000002'),
-(null, 'Truck do Morango', 'truckdomorango@morantech', 'truck123', '11901234569', '00000000000003');
+(null, 'Gustavo Silva', 'gustavosilva@morantech', 'GustavoSilva123', '11901234567', '00000000000001'),
+(null, 'Guilherme Santos', 'guilhermesantos@morantech', 'GuilhermeSantos123', '11901234568', '00000000000002'),
+(null, 'Anna Paula', 'annapaula@morantech', 'AnnaPaula123', '11901234569', '00000000000003');
 
 select * from cadastro;
 
@@ -24,14 +24,14 @@ select * from cadastro;
 create table sensor (
 idSensor int primary key auto_increment,
 modelo varchar(10),
-medição varchar(20),
+medição varchar(40),
 serialNumber char(9) -- (SU2023001)
 ) auto_increment = 1;
 
 insert into sensor values
-(null, 'SU-100', 'Umidade', 'SU2023001'),
-(null, 'ST-100', 'Temperatura', 'ST2023002'),
-(null, 'SB-100', 'Bloqueio', 'SB2023003');
+(null, 'UM-100', 'Umidade', 'UM2023001'),
+(null, 'TP-100', 'Temperatura', 'TP2023002'),
+(null, 'TU-100', 'Temperatura e Umidade', 'TU2023003');
 
 select * from sensor;
 
@@ -46,9 +46,9 @@ uf char(2)
 );
 
 insert into clientes values
-(1, 'Transports Morango', 5, 'Belo Horizonte', 'MG'),
-(2, 'Leva e Traz Morango', 7, 'Taubaté', 'SP'),
-(3, 'Truck do Morango', 9, 'Salvador', 'BA');
+(1, 'Gustavo Silva', 5, 'Belo Horizonte', 'MG'),
+(2, 'Guilherme Santos', 7, 'Taubaté', 'SP'),
+(3, 'Anna Paula', 9, 'Salvador', 'BA');
 
 select * from clientes;
 
@@ -63,10 +63,8 @@ cargaHorariaSemanal int
 ) auto_increment = 1;
 
 insert into funcionarios values
-(null, 'Gustavo', 'M202301001', 'Técnico de Instalação', 40),
-(null, 'Kaiky', 'M202301002', 'Diretor', 30),
-(null, 'Vinicius', 'M202301003', 'Suporte TI', 36);
+(null, 'Samuel Augusto', 'M202301001', 'Técnico de Instalação', 40),
+(null, 'Kaiky Cruz', 'M202301002', 'Diretor', 30),
+(null, 'Vinicius Inácio', 'M202301003', 'Suporte TI', 36);
 
 select * from funcionarios;
-
-drop table funcionarios;
